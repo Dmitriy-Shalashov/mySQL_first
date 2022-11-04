@@ -1,0 +1,298 @@
+$lightGreen: #b9e7e7;
+$light:#58cae6;
+$h1Color: #teal;
+
+h5 {
+   font-size: 14px;
+   font-weight: 400;
+}
+span{
+   cursor: pointer;
+}
+.app {
+   
+   display: flex;
+   justify-content: center;
+   background-color: $lightGreen;
+
+.container{
+      width: 1170px; 
+      min-height: 100vh;
+      padding: 0 20px;
+   }
+.link {
+   text-decoration: none;
+   color: inherit;
+}
+.auth {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+         
+
+         h1{
+            font-size: 20px;
+            color: teal;
+            margin-bottom: 20px;
+         }
+
+         &__form{
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            gap: 10px;
+            width: 250px;
+            background-color: white;
+         }
+
+         &__input{
+            padding: 10px;
+            border:none;
+            border-bottom: 1px solid teal;
+            
+         }
+
+         &__btn{
+            cursor: pointer;
+            margin-top: 25px;
+            padding: 10px;
+            border: none;
+            background-color: teal;
+            color: white;
+         }
+
+         &__footer{
+            font-size: 14px;
+            text-align: center;
+            margin-top: 5px;
+         }
+      } 
+      // NAVBAR
+.navbar {
+   display: flex;
+   padding: 10px 0;
+   justify-content: space-between;
+   border-bottom: 1px solid $light;
+   margin-bottom: 30px;
+   
+   &__logo img{
+      width: 120px;
+      
+   }
+   &__links{
+      display: flex;
+      align-items: center;
+      gap: 15px
+   }
+   .write{
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      background-color: $light;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      &:hover {
+         box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+      }
+   }
+   }
+   // FOOTER
+.footer{
+   margin-top: 100px;
+   height: 50px;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-top: 1px solid $light;
+   &__img{
+      height: 30px;
+   }
+}
+
+// HOME
+.home{
+
+   &__posts{
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+
+      
+   }
+   &__post{
+      display: flex;
+      flex-direction: row;
+      gap:100px;
+      &:nth-child(2n+1){
+         flex-direction: row-reverse;
+      }
+   } 
+   &__post-img{
+         flex:2;
+         position: relative;        
+      }
+   &__post img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+   }
+   &__post-content{
+      flex:3;
+      padding: 50px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+   &__post-btn{
+      width: max-content;
+      padding: 10px 30px;
+      border: none;
+      cursor: pointer;
+      color: $h1Color;
+      background-color: transparent;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+      &:hover{
+         color: white;
+         background-color: $light;
+      }
+   }
+}
+// SINGLE PAGE
+.single{
+display: flex;
+gap: 50px;
+
+&__content{
+   flex: 5;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+&__content-img{
+   width: 100%;
+   height: 300px;
+   object-fit: cover;
+}
+&__content-user{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+&__content-avatar{
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit:cover;
+}
+&__content-info{
+   font-weight: bold;
+   margin-right: 10px;
+}
+&__edit{
+   display: flex;
+   gap: 10px;
+}
+&__edit-img{
+   width: 20px;
+   cursor: pointer;
+}
+&__menu{
+   flex: 2;
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+&__menu-post{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+&__menu-img{
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+}
+&__menu-btn{
+   width: max-content;
+   padding: 10px 30px;
+   border: none;
+   cursor: pointer;
+   color: $h1Color;
+   background-color: transparent;
+   border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+   &:hover{
+      color: white;
+      background-color: $light;
+   }
+}
+}
+// WRITE
+.write{
+display: flex;
+gap: 20px;
+
+&__content{
+flex: 5;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+&__content-input{
+   padding: 10px;
+   border: 1px solid $light;
+}
+.editorContainer{
+   width: 100%;
+   height: 400px;
+   word-break: break-all;
+   border: 1px solid $light;
+    
+   &__editor :last-child{
+      border: none; 
+   }
+}
+&__btn-block{
+   display: flex;
+   justify-content: space-between;
+}
+&__btn{
+   padding: 5px 15px;
+   border: none;
+   cursor: pointer;
+   color: $h1Color;
+   background-color: $light;
+   border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+   &:hover{
+      color: white;
+      background-color: $light;
+   }
+}
+&__menu{
+flex: 2;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+&__menu-item{
+   border: 1px solid $light;
+   padding: 10px;
+   flex: 1;
+   display: flex;
+   gap: 10px;
+   flex-direction: column ;
+   }
+&__menu-input :last-child{
+margin-left: 10px;
+}
+}
+
+}
